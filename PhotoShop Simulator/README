@@ -1,0 +1,26 @@
+//Sean Oconnor Jose Delgado
+//soconn19 jdelgad9
+# README #
+
+This README would normally document whatever steps are necessary to get your application up and running.
+
+### What is this repository for? ###
+
+* Quick summary
+//Sean Oconnor Jose Delgado
+//soconn19 jdelgad9
+
+This is an image manipulation program like Photoshop. We read ppm image files from disk, perform one of a variety of image manipulation tasks, and then wrote zthe result back to disk as a new image file. There were some problems with leaks on read_image that couldn't be identified. An image was being returned in by this function and could't figure out how to fix.
+* Version 1.0
+
+* Writing tests
+There were 5 test files made to test out functions. They all included what was in ppm_io.h, imageManip.h, as well as the function in ppm_io.c. The functions of imageManip.c were tested out in these files. Copies of trees.ppm and building.ppm were put into the same directory as the test files in order to run the test using ./a.out.
+
+* Code
+Here's a brief overview of the functions used in this project and how we coded them. Most of them rely on some sort of helper function, which was used to improve readibility and reusability. One thing you might notice is that the functions most likely got better coded as time went on. That is, the earlier functions like exposure and the zooms are probably a little clunkier than the latter ones like pointilism and blur. That could just be me, though, I just figure that I got more familiar with manipulating the images as time went on.
+
+We were a bit rushed in coding all of this, but I think we did an alright job. I didn't handle error-catching that much, so if there are any errors that get through or are wrongly reported, that's probably on me. I did look out for memory-leaks though, so I'm pretty confident there shouldn't be any in our programs.
+
+A funny story is that I apparently was making one too many points in the pointilism function for a long time, which ended up only changing a single pixel. I only just recently figured out that could have been the cause of the error, so thankfully I was still able to change it.
+
+Apologies if any of the code is hard to read, I did use a few tricks here and there. One example was adding to an int x the value !(x % 2), which would increase x to the smallest odd number greater than or equal to it. Another was adding the absolute value of the difference between two variables to the sume of the two variables, and then dividing by 2. This gave the max of the two variables, which was easier in the moment than writing a new function.
